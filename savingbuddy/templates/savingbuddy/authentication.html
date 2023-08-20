@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Authentication</title>
+</head>
+
+<body>
+    <form id="login" class="auth" action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+        <h2>Already have an account? Welcome back!</h2>
+        <input type="text" name="username" autocomplete="off">
+        <input type="password" name="password" autocomplete="off">
+        <input type="submit" value="Sign in">
+    </form>
+    <form id="signup" class="auth" method="post" action="{% url 'signup' %}">
+        {% csrf_token %}
+        <h2>New here? Join us!</h2>
+        <input name="username" type="text" autocomplete="off">
+        <input name="email" type="email" autocomplete="off">
+        <input name="password" type="password" autocomplete="off">
+        <input name="password2" type="password" autocomplete="off">        
+        <input type="submit" value="Sign up">
+    </form>
+</body>
+
+</html>
