@@ -1,9 +1,7 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 
-class User(models.Model):
-    username = models.CharField(max_length=100, unique=True)
-    password = models.CharField(max_length=100)
-    activesince = models.DateTimeField(auto_now_add=True)
+class User(AbstractUser):
     balance = models.IntegerField(default=0)
 
 class Log(models.Model):
@@ -12,4 +10,4 @@ class Log(models.Model):
     value = models.IntegerField()
     remainingbalance = models.IntegerField()
     timestamp = models.DateTimeField(auto_now_add=True)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey('User', on_delete=models.CASCADE)
