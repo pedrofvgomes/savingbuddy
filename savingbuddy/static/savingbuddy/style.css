@@ -46,6 +46,10 @@
     margin-right: 0;
     margin-top: 0;
 }
+.mainpage-window-header svg:hover{
+    transform: scale(1.2);
+    transition: transform ease-in-out 0.05s;
+}
 #mainpage{
     background-color: lightgrey;
     display: grid;
