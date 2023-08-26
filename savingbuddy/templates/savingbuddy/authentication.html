@@ -4,25 +4,31 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale = 1">
+    <link rel="stylesheet" href="../../static/savingbuddy/style.css">
     <title>Authentication</title>
 </head>
 
-<body>
-    
+<body id="auth">
+
     <form id="login" class="auth" method="post" action="{% url 'login' %}">
         {% csrf_token %}
         <h2>Already have an account? Welcome back!</h2>
-        <input type="text" name="username" autocomplete="off">
-        <input type="password" name="password" autocomplete="off">
+        <span class="input-label">username</span>
+        <input type="text" name="username" autocomplete="off" placeholder="username">
+        <span class="input-label">password</span>
+        <input type="password" name="password" autocomplete="off" placeholder="password">
         <input type="submit" value="Sign in">
     </form>
 
     <form id="signup" class="auth" method="post" action="{% url 'signup' %}">
         {% csrf_token %}
         <h2>New here? Join us!</h2>
-        <input name="username" type="text" autocomplete="off">
-        <input name="password" type="password" autocomplete="off">
-        <input name="password2" type="password" autocomplete="off">
+        <span class="input-label">username</span>
+        <input name="username" type="text" autocomplete="off" placeholder="username">
+        <span class="input-label">password</span>
+        <input name="password" type="password" autocomplete="off" placeholder="password">
+        <span class="input-label">confirm password</span>
+        <input name="password2" type="password" autocomplete="off" placeholder="confirm password">
         <input type="submit" value="Sign up">
     </form>
 </body>

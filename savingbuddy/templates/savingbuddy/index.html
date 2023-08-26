@@ -77,12 +77,12 @@
                     let othericons = document.querySelectorAll('.mainpage-window-header svg.bi-arrows-fullscreen');
                     icon.parentElement.parentElement.style.gridColumn = '1';
                     icon.parentElement.parentElement.style.gridRow = '1';
+                    icon.parentElement.parentElement.style.margin = '4em';
 
                     othericons.forEach(element => {
                         element.parentElement.parentElement.style.display = 'none';
                     });
 
-                    document.querySelector('.mainpage-window:hover').style.transform = "scale(1)";
                 }
                 else {
                     icon.classList.remove('bi-fullscreen-exit');
@@ -92,18 +92,28 @@
                     let othericons = document.querySelectorAll('.mainpage-window-header svg.bi-arrows-fullscreen');
                     othericons.forEach(element => {
                         element.parentElement.parentElement.style.display = 'block';
+                        element.parentElement.parentElement.style.margin = '3em';
                     });
+                    icon.parentElement.parentElement.style.margin = '3em';
+
                     document.querySelector('#mainpage').style.display = 'grid';
                     document.querySelector('.mainpage-window:nth-child(1)').style.gridColumn = '1';
                     document.querySelector('.mainpage-window:nth-child(1)').style.gridRow = '1';
+                    document.querySelector('.mainpage-window:nth-child(1)').style.marginRight = '1em';
+                    document.querySelector('.mainpage-window:nth-child(1)').style.marginBottom = '1em';
                     document.querySelector('.mainpage-window:nth-child(2)').style.gridColumn = '2';
                     document.querySelector('.mainpage-window:nth-child(2)').style.gridRow = '1';
+                    document.querySelector('.mainpage-window:nth-child(2)').style.marginLeft = '1em';
+                    document.querySelector('.mainpage-window:nth-child(2)').style.marginBottom = '1em';
                     document.querySelector('.mainpage-window:nth-child(3)').style.gridColumn = '1';
                     document.querySelector('.mainpage-window:nth-child(3)').style.gridRow = '2';
+                    document.querySelector('.mainpage-window:nth-child(3)').style.marginRight = '1em';
+                    document.querySelector('.mainpage-window:nth-child(3)').style.marginTop = '1em';
                     document.querySelector('.mainpage-window:nth-child(4)').style.gridColumn = '2';
                     document.querySelector('.mainpage-window:nth-child(4)').style.gridRow = '2';
+                    document.querySelector('.mainpage-window:nth-child(4)').style.marginLeft = '1em';
+                    document.querySelector('.mainpage-window:nth-child(4)').style.marginTop = '1em';
 
-                    document.querySelector('.mainpage-window:hover').style.transform = 'scale(1.05)';
                 }
             })
         });
