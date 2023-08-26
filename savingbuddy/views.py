@@ -23,7 +23,7 @@ def profile(request):
     return redirect('authentication')
 
 def authentication(request):
-    return render(request, "savingbuddy/authentication.html")
+    return render(request, 'savingbuddy/authentication.html')
 
 def login_view(request):
     if request.method == "POST":
@@ -35,9 +35,9 @@ def login_view(request):
             login(request, user)
             return HttpResponseRedirect(reverse('index'))
         else:
-            return render(request, "savingbuddy/authentication.html")
+            return redirect('authentication')
     else:
-        return render(request, "savingbuddy/authentication.html")
+        return redirect('authentication')
 
 def signup_view(request):
     if request.method == 'POST':
@@ -45,8 +45,8 @@ def signup_view(request):
         password = request.POST['password']
         password2 = request.POST['password2']
 
-        if password != password2:
-            return render(request, 'savingbuddy/authentication.html')
+        if password != password2 or username == "":
+            return redirect('authentication')
         
         try:
             user = User.objects.create_user(username = username, password = password)

@@ -14,9 +14,9 @@
         {% csrf_token %}
         <h2>Already have an account? Welcome back!</h2>
         <span class="input-label">username</span>
-        <input type="text" name="username" autocomplete="off" placeholder="username" spellcheck="false">
+        <input type="text" name="username" autocomplete="off" placeholder="username" spellcheck="false" value="">
         <span class="input-label">password</span>
-        <input type="password" name="password" autocomplete="off" placeholder="password" spellcheck="false"> 
+        <input type="password" name="password" autocomplete="off" placeholder="password" spellcheck="false" value=""> 
         <input type="submit" value="Sign in">
     </form>
 
@@ -24,11 +24,11 @@
         {% csrf_token %}
         <h2>New here? Join us!</h2>
         <span class="input-label">username</span>
-        <input name="username" type="text" autocomplete="off" placeholder="username" spellcheck="false">
+        <input name="username" type="text" autocomplete="off" placeholder="username" spellcheck="false" value="">
         <span class="input-label">password</span>
-        <input name="password" type="password" autocomplete="off" placeholder="password" spellcheck="false">
+        <input name="password" type="password" autocomplete="off" placeholder="password" spellcheck="false" value="">
         <span class="input-label">confirm password</span>
-        <input name="password2" type="password" autocomplete="off" placeholder="confirm password" spellcheck="false">
+        <input name="password2" type="password" autocomplete="off" placeholder="confirm password" spellcheck="false" value="">
         <input type="submit" value="Sign up">
     </form>
 </body>
