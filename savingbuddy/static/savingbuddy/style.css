@@ -93,7 +93,14 @@
     color: white;
 }
 
-#auth{
+#authentication *{
+    font-family: 'Kreadon', sans-serif;
+    font-weight: 700;
+}
+#authentication h2{
+    font-weight: 800;
+}
+#authentication{
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -103,15 +110,74 @@
 }
 .auth{
     background-color: whitesmoke;
+    transform: scale(1);
     border-radius: 15px;
     margin: auto;
     padding: 1.5em;
     display: flex;
     flex-direction: column;
-    box-shadow: 0px 0px 5px rgb(168, 168, 168);
+    width: 33%;
+    box-shadow: 0px 0px 20px rgb(149, 149, 149);
+    transition: box-shadow ease-in-out 0.2s, transform ease-in-out 0.05s;
 }
 .auth:hover{
+    box-shadow: 0px 0px 15px rgb(117, 117, 117);
     transform: scale(1.05);
-    transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.1s;
-    box-shadow: 0px 0px 8px rgb(117, 117, 117);
+    transition: box-shadow ease-in-out 0.2s, transform ease-in-out 0.05s;
+}
+.auth:first-child{
+    margin-right: 1em;
+    margin-left: auto;
+}
+.auth:nth-child(2){
+    margin-left: 1em;
+    margin-right: auto;
+}
+.auth h2{
+    color: #515151;
+    margin: 0;
+    font-size: 30px;
+    font-weight: 400;
+}
+.auth span, .auth input{
+    color: #4759ca;
+}
+.auth span{
+    margin-top: 1em;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+.auth input{
+    padding: 1em;
+    border: solid 2px rgba(81, 81, 81, 0.5);
+    border-radius: 20px;
+    background-color: rgba(207, 207, 207, 0.5);
+    font-size: 20px;
+}
+.auth input:focus{
+    outline: solid 2px rgba(71, 89, 202, 0.7);
+    border: solid 2px rgba(71, 89, 202, 0.7);
+}
+.auth input[type="submit"]{
+    background-color: #4759ca;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    margin: auto;
+    margin-top: 1em;
+    font-size: 20px;
+    width: 35%;
+    padding: 0.5em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+.auth input[type="submit"]:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.4);;
+}
+.auth input:hover{
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.25);
+}
+.auth input::selection{
+    background-color: #4759ca;
 }
