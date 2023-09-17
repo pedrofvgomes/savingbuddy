@@ -15,13 +15,6 @@ def index(request):
         "recentactivity" : [0]
     })
 
-def profile(request):
-    if request.user.is_authenticated:
-        return render(request, 'savingbuddy/profile.html', {
-            "user" : request.user
-        })
-    return redirect('authentication')
-
 def authentication(request):
     return render(request, 'savingbuddy/authentication.html')
 
