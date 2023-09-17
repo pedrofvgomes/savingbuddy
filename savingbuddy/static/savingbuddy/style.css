@@ -8,46 +8,20 @@
     background-color: grey;
     color: white;
 }
-html, body{
+html, body, #mainpage, #authentication{
     width: 100%;
     height: 100%;
     margin: 0;
+    display: flex;
+    flex-direction: row;
+    background-color: lightgrey;
 }
-
-#profile:hover{
-    cursor: pointer;
-}
-#authenticate{
-    width: 10em;
-}
-#profile *, #authenticate{
-    position: absolute;
-    right: 2em;
-    top: 2em;
-    align-items: center;
-}
-#profile span{
-    font-size: 1.5em;
-    font-weight: 700;
-    color: #bc5a45;
-    top: 1.65em;
-    right: 3.5em;
-}
-
 
 #authentication *{
     font-weight: 700;
 }
 #authentication h2{
     font-weight: 800;
-}
-#authentication, #mainpage, html, body{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-    margin: auto;
-    background-color: lightgrey;
 }
 .auth{
     background-color: whitesmoke;
@@ -81,7 +55,7 @@ html, body{
     font-weight: 400;
 }
 .auth span, .auth input{
-    color: #bc5a45;
+    color: #266943;
 }
 .auth span{
     margin-top: 1em;
@@ -96,11 +70,11 @@ html, body{
     font-size: 20px;
 }
 .auth input:focus{
-    outline: solid 2px rgba(188, 90, 69, 0.7);
-    border: solid 2px rgba(188, 90, 69, 0.7);
+    outline: solid 2px rgba(38, 105, 67, 0.7);
+    border: solid 2px rgba(38, 105, 67, 0.7);
 }
-.auth input[type="submit"]{
-    background-color: #bc5a45;
+.auth input[type="submit"], #authenticate{
+    background-color: #266943;
     border: none;
     border-radius: 20px;
     color: white;
@@ -112,14 +86,63 @@ html, body{
     padding-left: 1.5em;
     padding-right: 1.5em;
 }
-.auth input[type="submit"]:hover{
+.auth input[type="submit"]:hover, #authenticate:hover{
     cursor: pointer;
-    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.4);;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.4);
+    transition: box-shadow ease-in-out 0.1s;
 }
 .auth input:hover{
     box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.25);
 }
 .auth input::selection{
-    background-color: #bc5a45;
+    background-color: #266943;
 }
 
+#profile:hover{
+    cursor: pointer;
+}
+#authenticate{
+    width: 10em;
+    margin-top: 0;
+    box-shadow: none;
+    transition: box-shadow ease-in-out 0.1s;
+    font-weight: 800;
+}
+#profile *, #authenticate{
+    position: absolute;
+    right: 2em;
+    top: 2em;
+    align-items: center;
+}
+#profile span{
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #266943;
+    top: 1.65em;
+    right: 3.5em;
+}
+
+
+#nav{
+    background-color: #266943;
+    padding: 2em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+.nav-item{
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 2em;
+}
+.nav-item:hover{
+    cursor: pointer;
+}
+.nav-item span{
+    margin: auto;
+}
