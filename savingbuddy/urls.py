@@ -6,5 +6,6 @@ urlpatterns = [
     path("authentication", views.authentication, name="authentication"),
     path('login', views.login_view, name='login'),
     path('signup', views.signup_view, name='signup'),
-    path('logout', views.logout_view, name='logout')
+    path('logout', views.logout_view, name='logout'),
+    path('<str:invalid>', views.invalid)
 ]

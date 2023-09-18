@@ -7,8 +7,8 @@ from django.db import IntegrityError
 
 from savingbuddy.models import User, Log
 
-
-# Create your views here.
+def invalid(request, invalid):
+    return redirect('index')
 
 def index(request):
     return render(request, "savingbuddy/index.html", {
