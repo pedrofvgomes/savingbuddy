@@ -125,19 +125,30 @@ html, body, #mainpage, #authentication{
 
 #nav{
     background-color: #266943;
-    width: 5em;
+    width: auto;
     display: flex;
     flex-direction: column;
     color: white;
 }
 #nav svg{
-    margin: 1em;
     transform: scale(1);
     transition: transform ease 0.2s;
 }
 #nav svg:hover{
     transform: scale(1.1);
     cursor: pointer;
+}
+#home{
+    margin: 1.5em;
+    margin-bottom: auto;
+}
+#logout{
+    margin: 1.5em;
+    margin-top: auto;
+    &:hover{
+        fill: rgb(186, 12, 12);
+    }
+    transition: fill ease 0.2s;
 }
 
 
