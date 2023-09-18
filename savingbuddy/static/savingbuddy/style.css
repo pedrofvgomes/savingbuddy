@@ -133,20 +133,22 @@ html, body, #mainpage, #authentication{
 #nav svg{
     transform: scale(1);
     transition: transform ease 0.2s;
-    margin: 1.5em;
+    margin: 1em;
 }
 #nav svg:hover{
     transform: scale(1.1);
     cursor: pointer;
 }
-#nav #logout{
+#nav #settings{
     margin-top: auto;
+}
+#nav #logout{
+    transition: fill ease 0.2s;
     &:hover{
         fill: rgb(186, 12, 12);
     }
-    transition: fill ease 0.2s;
 }
-#nav #logs{
+#nav #savings{
     margin-bottom: auto;
 }
 
